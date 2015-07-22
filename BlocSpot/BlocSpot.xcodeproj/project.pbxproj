@@ -69,10 +69,10 @@
 		FA20F78E1B5EFECB00E942F1 = {
 			isa = PBXGroup;
 			children = (
-				FA20F7C31B5F022A00E942F1 /* MapKit.framework */,
 				FA20F7991B5EFECB00E942F1 /* BlocSpot */,
 				FA20F7B61B5EFECB00E942F1 /* BlocSpotTests */,
 				FA20F7981B5EFECB00E942F1 /* Products */,
+				FA20F7C31B5F022A00E942F1 /* MapKit.framework */,
 			);
 			sourceTree = "<group>";
 		};

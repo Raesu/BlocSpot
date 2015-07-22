@@ -4,4 +4,68 @@
    <FileRef
       location = "self:BlocSpot.xcodeproj">
    </FileRef>
+   <Group
+      location = "container:"
+      name = "Wireframes">
+      <FileRef
+         location = "group:blocspot-01.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-01@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-02.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-02@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-03.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-03@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-04.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-04@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-05.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-05@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-06.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-06@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-07.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-07@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-08.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-08@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-09.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-09@2x.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-10.png">
+      </FileRef>
+      <FileRef
+         location = "group:blocspot-10@2x.png">
+      </FileRef>
+   </Group>
 </Workspace>
