@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFDD7232E271E1076BFD7D37 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A32824DB6A8EEA676A42EFC0 /* libPods.a */; };
 		FA20F79D1B5EFECB00E942F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA20F79C1B5EFECB00E942F1 /* main.m */; };
 		FA20F7A01B5EFECB00E942F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA20F79F1B5EFECB00E942F1 /* AppDelegate.m */; };
 		FA20F7A31B5EFECB00E942F1 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA20F7A21B5EFECB00E942F1 /* MasterViewController.m */; };
@@ -15,7 +16,9 @@
 		FA20F7AB1B5EFECB00E942F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA20F7AA1B5EFECB00E942F1 /* Images.xcassets */; };
 		FA20F7AE1B5EFECB00E942F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA20F7AC1B5EFECB00E942F1 /* LaunchScreen.xib */; };
 		FA20F7BA1B5EFECB00E942F1 /* BlocSpotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA20F7B91B5EFECB00E942F1 /* BlocSpotTests.m */; };
-		FA20F7C41B5F022A00E942F1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA20F7C31B5F022A00E942F1 /* MapKit.framework */; };
+		FA20F7EF1B5FDCAC00E942F1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA20F7EE1B5FDCAC00E942F1 /* MapViewController.m */; };
+		FA762E9D1B626C3D0035E1AF /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FA762E9C1B626C3D0035E1AF /* DataSource.m */; };
+		FA762EA91B6271160035E1AF /* PlaceOfInterest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA762EA81B6271160035E1AF /* PlaceOfInterest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A32824DB6A8EEA676A42EFC0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B748D1A9BB12B85487F98140 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		C59849E3F73141447895487F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FA20F7971B5EFECB00E942F1 /* BlocSpot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlocSpot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA20F79B1B5EFECB00E942F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA20F79C1B5EFECB00E942F1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,7 +50,12 @@
 		FA20F7B31B5EFECB00E942F1 /* BlocSpotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlocSpotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA20F7B81B5EFECB00E942F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA20F7B91B5EFECB00E942F1 /* BlocSpotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlocSpotTests.m; sourceTree = "<group>"; };
-		FA20F7C31B5F022A00E942F1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		FA20F7ED1B5FDCAC00E942F1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		FA20F7EE1B5FDCAC00E942F1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		FA762E9B1B626C3D0035E1AF /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataSource.h; path = BlocSpot/DataSource.h; sourceTree = "<group>"; };
+		FA762E9C1B626C3D0035E1AF /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSource.m; path = BlocSpot/DataSource.m; sourceTree = "<group>"; };
+		FA762EA71B6271160035E1AF /* PlaceOfInterest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceOfInterest.h; path = BlocSpot/PlaceOfInterest.h; sourceTree = "<group>"; };
+		FA762EA81B6271160035E1AF /* PlaceOfInterest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlaceOfInterest.m; path = BlocSpot/PlaceOfInterest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA20F7C41B5F022A00E942F1 /* MapKit.framework in Frameworks */,
+				BFDD7232E271E1076BFD7D37 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,13 +77,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7628CE906175EF35BB51DA5D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B748D1A9BB12B85487F98140 /* Pods.debug.xcconfig */,
+				C59849E3F73141447895487F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A42A00A7BB3E66FABF9E52D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A32824DB6A8EEA676A42EFC0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA20F78E1B5EFECB00E942F1 = {
 			isa = PBXGroup;
 			children = (
 				FA20F7991B5EFECB00E942F1 /* BlocSpot */,
 				FA20F7B61B5EFECB00E942F1 /* BlocSpotTests */,
 				FA20F7981B5EFECB00E942F1 /* Products */,
-				FA20F7C31B5F022A00E942F1 /* MapKit.framework */,
+				7628CE906175EF35BB51DA5D /* Pods */,
+				A42A00A7BB3E66FABF9E52D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,9 +123,10 @@
 				FA20F7A21B5EFECB00E942F1 /* MasterViewController.m */,
 				FA20F7A41B5EFECB00E942F1 /* DetailViewController.h */,
 				FA20F7A51B5EFECB00E942F1 /* DetailViewController.m */,
+				FA20F7ED1B5FDCAC00E942F1 /* MapViewController.h */,
+				FA20F7EE1B5FDCAC00E942F1 /* MapViewController.m */,
 				FA20F7A71B5EFECB00E942F1 /* Main.storyboard */,
-				FA20F7AA1B5EFECB00E942F1 /* Images.xcassets */,
-				FA20F7AC1B5EFECB00E942F1 /* LaunchScreen.xib */,
+				FA762EAA1B6277590035E1AF /* Model */,
 				FA20F79A1B5EFECB00E942F1 /* Supporting Files */,
 			);
 			path = BlocSpot;
@@ -105,6 +135,8 @@
 		FA20F79A1B5EFECB00E942F1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FA20F7AC1B5EFECB00E942F1 /* LaunchScreen.xib */,
+				FA20F7AA1B5EFECB00E942F1 /* Images.xcassets */,
 				FA20F79B1B5EFECB00E942F1 /* Info.plist */,
 				FA20F79C1B5EFECB00E942F1 /* main.m */,
 			);
@@ -128,6 +160,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FA762EAA1B6277590035E1AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA762EA71B6271160035E1AF /* PlaceOfInterest.h */,
+				FA762EA81B6271160035E1AF /* PlaceOfInterest.m */,
+				FA762E9B1B626C3D0035E1AF /* DataSource.h */,
+				FA762E9C1B626C3D0035E1AF /* DataSource.m */,
+			);
+			name = Model;
+			path = ..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +179,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA20F7BD1B5EFECB00E942F1 /* Build configuration list for PBXNativeTarget "BlocSpot" */;
 			buildPhases = (
+				6A9E01139BEBFA4051563673 /* Check Pods Manifest.lock */,
 				FA20F7931B5EFECB00E942F1 /* Sources */,
 				FA20F7941B5EFECB00E942F1 /* Frameworks */,
 				FA20F7951B5EFECB00E942F1 /* Resources */,
+				7E9DB441B08E99C25AAB824C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -179,7 +225,7 @@
 						CreatedOnToolsVersion = 6.4;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -228,6 +274,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6A9E01139BEBFA4051563673 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7E9DB441B08E99C25AAB824C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA20F7931B5EFECB00E942F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -235,6 +314,9 @@
 			files = (
 				FA20F7A01B5EFECB00E942F1 /* AppDelegate.m in Sources */,
 				FA20F7A31B5EFECB00E942F1 /* MasterViewController.m in Sources */,
+				FA762EA91B6271160035E1AF /* PlaceOfInterest.m in Sources */,
+				FA762E9D1B626C3D0035E1AF /* DataSource.m in Sources */,
+				FA20F7EF1B5FDCAC00E942F1 /* MapViewController.m in Sources */,
 				FA20F79D1B5EFECB00E942F1 /* main.m in Sources */,
 				FA20F7A61B5EFECB00E942F1 /* DetailViewController.m in Sources */,
 			);
@@ -360,9 +442,12 @@
 		};
 		FA20F7BE1B5EFECB00E942F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B748D1A9BB12B85487F98140 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BlocSpot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -370,9 +455,12 @@
 		};
 		FA20F7BF1B5EFECB00E942F1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C59849E3F73141447895487F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BlocSpot/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -431,6 +519,7 @@
 				FA20F7BF1B5EFECB00E942F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FA20F7C01B5EFECB00E942F1 /* Build configuration list for PBXNativeTarget "BlocSpotTests" */ = {
 			isa = XCConfigurationList;
@@ -439,6 +528,7 @@
 				FA20F7C21B5EFECB00E942F1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

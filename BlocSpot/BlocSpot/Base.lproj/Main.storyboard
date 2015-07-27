@@ -57,13 +57,35 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="BlocSpot" id="tQt-TN-PWz">
-                        <barButtonItem key="leftBarButtonItem" title="Map" id="PbK-Sm-kvv"/>
-                        <barButtonItem key="rightBarButtonItem" title="Category" id="8H8-wV-A6m"/>
+                        <barButtonItem key="rightBarButtonItem" title="Map" id="PbK-Sm-kvv">
+                            <connections>
+                                <segue destination="zuk-b4-x6i" kind="push" identifier="mapSegue" id="Wjp-aV-bsa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="322.66666666666669" y="60.586666666666666"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="fo6-z6-per">
+            <objects>
+                <viewController id="zuk-b4-x6i" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="27A-fq-fWV"/>
+                        <viewControllerLayoutGuide type="bottom" id="GBp-d8-2pS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cfm-T6-De1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Zp8-aj-hdy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q7j-P7-3HU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="716" y="-562"/>
         </scene>
         <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
