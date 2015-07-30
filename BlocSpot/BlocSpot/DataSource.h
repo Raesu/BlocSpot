@@ -7,9 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PlaceOfInterest.h"
 
 @interface DataSource : NSObject
 
 @property (nonatomic, strong, readonly) NSArray *items;
-
++ (instancetype)sharedInstance;
+- (void)addPOI:(PlaceOfInterest *)POI;
 @end

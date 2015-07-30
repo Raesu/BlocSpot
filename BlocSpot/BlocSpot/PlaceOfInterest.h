@@ -8,6 +8,10 @@
 
 #import <GoogleMaps/GoogleMaps.h>
 
-@interface PlaceOfInterest : GMSMarker
+@interface PlaceOfInterest : GMSMarker <NSCoding>
+
+@property (nonatomic, strong) NSString *category;
+@property (nonatomic, strong) NSDate *dateAdded;
+@property (nonatomic, strong) NSString *notes;
 
 @end

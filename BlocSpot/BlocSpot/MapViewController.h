@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PlaceOfInterest.h"
 
 @interface MapViewController : UIViewController
+
+@property (nonatomic, strong) PlaceOfInterest *currentPOI;
 
 @end

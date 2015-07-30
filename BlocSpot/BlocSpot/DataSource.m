@@ -7,7 +7,6 @@
 //
 
 #import "DataSource.h"
-#import "PlaceOfInterest.h"
 
 @interface DataSource () {
     NSMutableArray *_items;
@@ -30,46 +29,46 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        
-        
-        _items = [self getTempPOIs];
+
+        NSString *fullPath = [self pathForFilename:NSStringFromSelector(@selector(items))];
+        NSArray *storedItems = [NSKeyedUnarchiver unarchiveObjectWithFile:fullPath];
+            if (storedItems.count > 0) {
+                NSMutableArray *mutableItems = [storedItems mutableCopy];
+                [self willChangeValueForKey:@"items"];
+                _items = mutableItems;
+                [self didChangeValueForKey:@"items"];
+            }
     }
     return self;
 }
 
-- (NSMutableArray *)getTempPOIs {
-    
-    PlaceOfInterest *point1 = [PlaceOfInterest new];
-    point1.position = CLLocationCoordinate2DMake(37.777931, -122.456009);
-    point1.title = @"Point 1";
-    point1.snippet = @"Temp snippet";
-    point1.map = nil;
-    
-    PlaceOfInterest *point2 = [PlaceOfInterest new];
-    point1.position = CLLocationCoordinate2DMake(37.793742, -122.435531);
-    point1.title = @"Point 2";
-    point1.snippet = @"Temp snippet";
-    point1.map = nil;
+- (NSString *)pathForFilename:(NSString *)fileName {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths firstObject];
+    NSString *dataPath = [documentsDirectory stringByAppendingPathComponent:fileName];
+    return dataPath;
+}
 
-    PlaceOfInterest *point3 = [PlaceOfInterest new];
-    point1.position = CLLocationCoordinate2DMake(37.781428, -122.406358);
-    point1.title = @"Point 3";
-    point1.snippet = @"Temp snippet";
-    point1.map = nil;
-    
-    PlaceOfInterest *point4 = [PlaceOfInterest new];
-    point1.position = CLLocationCoordinate2DMake(37.781253, -122.425959);
-    point1.title = @"Point 4";
-    point1.snippet = @"Temp snippet";
-    point1.map = nil;
-    
-    PlaceOfInterest *point5 = [PlaceOfInterest new];
-    point1.position = CLLocationCoordinate2DMake(37.800263, -122.412316);
-    point1.title = @"Point 5";
-    point1.snippet = @"Temp snippet";
-    point1.map = nil;
-    
-    return [NSMutableArray arrayWithObjects:point1, point2, point3, point4, point5, nil];
+- (void)saveItems {
+    if (self.items.count > 0) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSString *fullPath = [self pathForFilename:NSStringFromSelector(@selector(items))];
+            NSData *itemData = [NSKeyedArchiver archivedDataWithRootObject:self.items];
+            
+            NSError *dataError;
+            BOOL wroteSuccessfully = [itemData writeToFile:fullPath options:NSDataWritingAtomic | NSDataWritingFileProtectionCompleteUnlessOpen error:&dataError];
+            
+            if (!wroteSuccessfully) {
+                NSLog(@"Could not save to disk:%@", dataError);
+            }
+        });
+    }
+}
+
+- (void)addPOI:(PlaceOfInterest *)POI {
+    NSMutableArray *itemsWithKVO = [self mutableArrayValueForKey:@"items"];
+    [itemsWithKVO addObject:POI];
+    [self saveItems];
 }
 
 @end

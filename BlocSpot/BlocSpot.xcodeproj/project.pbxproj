@@ -11,12 +11,30 @@
 		FA20F79D1B5EFECB00E942F1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA20F79C1B5EFECB00E942F1 /* main.m */; };
 		FA20F7A01B5EFECB00E942F1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA20F79F1B5EFECB00E942F1 /* AppDelegate.m */; };
 		FA20F7A31B5EFECB00E942F1 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA20F7A21B5EFECB00E942F1 /* MasterViewController.m */; };
-		FA20F7A61B5EFECB00E942F1 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA20F7A51B5EFECB00E942F1 /* DetailViewController.m */; };
 		FA20F7A91B5EFECB00E942F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA20F7A71B5EFECB00E942F1 /* Main.storyboard */; };
 		FA20F7AB1B5EFECB00E942F1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA20F7AA1B5EFECB00E942F1 /* Images.xcassets */; };
 		FA20F7AE1B5EFECB00E942F1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA20F7AC1B5EFECB00E942F1 /* LaunchScreen.xib */; };
 		FA20F7BA1B5EFECB00E942F1 /* BlocSpotTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FA20F7B91B5EFECB00E942F1 /* BlocSpotTests.m */; };
 		FA20F7EF1B5FDCAC00E942F1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA20F7EE1B5FDCAC00E942F1 /* MapViewController.m */; };
+		FA34E2D11B680D5500778FB6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA34E2D01B680D5500778FB6 /* DetailViewController.m */; };
+		FA34E2EB1B69977400778FB6 /* blocspot-01.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2D91B69977400778FB6 /* blocspot-01.png */; };
+		FA34E2EC1B69977400778FB6 /* blocspot-01@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2DA1B69977400778FB6 /* blocspot-01@2x.png */; };
+		FA34E2ED1B69977400778FB6 /* blocspot-02.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2DB1B69977400778FB6 /* blocspot-02.png */; };
+		FA34E2EE1B69977400778FB6 /* blocspot-02@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2DC1B69977400778FB6 /* blocspot-02@2x.png */; };
+		FA34E2EF1B69977400778FB6 /* blocspot-03.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2DD1B69977400778FB6 /* blocspot-03.png */; };
+		FA34E2F01B69977400778FB6 /* blocspot-03@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2DE1B69977400778FB6 /* blocspot-03@2x.png */; };
+		FA34E2F11B69977400778FB6 /* blocspot-04.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2DF1B69977400778FB6 /* blocspot-04.png */; };
+		FA34E2F21B69977400778FB6 /* blocspot-04@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2E01B69977400778FB6 /* blocspot-04@2x.png */; };
+		FA34E2F31B69977400778FB6 /* blocspot-05.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2E11B69977400778FB6 /* blocspot-05.png */; };
+		FA34E2F41B69977400778FB6 /* blocspot-05@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2E21B69977400778FB6 /* blocspot-05@2x.png */; };
+		FA34E2F51B69977400778FB6 /* blocspot-06.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2E31B69977400778FB6 /* blocspot-06.png */; };
+		FA34E2F61B69977400778FB6 /* blocspot-06@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2E41B69977400778FB6 /* blocspot-06@2x.png */; };
+		FA34E2F71B69977400778FB6 /* blocspot-07.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2E51B69977400778FB6 /* blocspot-07.png */; };
+		FA34E2F81B69977400778FB6 /* blocspot-07@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2E61B69977400778FB6 /* blocspot-07@2x.png */; };
+		FA34E2F91B69977400778FB6 /* blocspot-08.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2E71B69977400778FB6 /* blocspot-08.png */; };
+		FA34E2FA1B69977400778FB6 /* blocspot-08@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2E81B69977400778FB6 /* blocspot-08@2x.png */; };
+		FA34E2FB1B69977400778FB6 /* blocspot-09.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2E91B69977400778FB6 /* blocspot-09.png */; };
+		FA34E2FC1B69977400778FB6 /* blocspot-09@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA34E2EA1B69977400778FB6 /* blocspot-09@2x.png */; };
 		FA762E9D1B626C3D0035E1AF /* DataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = FA762E9C1B626C3D0035E1AF /* DataSource.m */; };
 		FA762EA91B6271160035E1AF /* PlaceOfInterest.m in Sources */ = {isa = PBXBuildFile; fileRef = FA762EA81B6271160035E1AF /* PlaceOfInterest.m */; };
 /* End PBXBuildFile section */
@@ -42,8 +60,6 @@
 		FA20F79F1B5EFECB00E942F1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FA20F7A11B5EFECB00E942F1 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		FA20F7A21B5EFECB00E942F1 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		FA20F7A41B5EFECB00E942F1 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		FA20F7A51B5EFECB00E942F1 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		FA20F7A81B5EFECB00E942F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA20F7AA1B5EFECB00E942F1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FA20F7AD1B5EFECB00E942F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -52,6 +68,26 @@
 		FA20F7B91B5EFECB00E942F1 /* BlocSpotTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlocSpotTests.m; sourceTree = "<group>"; };
 		FA20F7ED1B5FDCAC00E942F1 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		FA20F7EE1B5FDCAC00E942F1 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		FA34E2CF1B680D5500778FB6 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		FA34E2D01B680D5500778FB6 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		FA34E2D91B69977400778FB6 /* blocspot-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-01.png"; sourceTree = "<group>"; };
+		FA34E2DA1B69977400778FB6 /* blocspot-01@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-01@2x.png"; sourceTree = "<group>"; };
+		FA34E2DB1B69977400778FB6 /* blocspot-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-02.png"; sourceTree = "<group>"; };
+		FA34E2DC1B69977400778FB6 /* blocspot-02@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-02@2x.png"; sourceTree = "<group>"; };
+		FA34E2DD1B69977400778FB6 /* blocspot-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-03.png"; sourceTree = "<group>"; };
+		FA34E2DE1B69977400778FB6 /* blocspot-03@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-03@2x.png"; sourceTree = "<group>"; };
+		FA34E2DF1B69977400778FB6 /* blocspot-04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-04.png"; sourceTree = "<group>"; };
+		FA34E2E01B69977400778FB6 /* blocspot-04@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-04@2x.png"; sourceTree = "<group>"; };
+		FA34E2E11B69977400778FB6 /* blocspot-05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-05.png"; sourceTree = "<group>"; };
+		FA34E2E21B69977400778FB6 /* blocspot-05@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-05@2x.png"; sourceTree = "<group>"; };
+		FA34E2E31B69977400778FB6 /* blocspot-06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-06.png"; sourceTree = "<group>"; };
+		FA34E2E41B69977400778FB6 /* blocspot-06@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-06@2x.png"; sourceTree = "<group>"; };
+		FA34E2E51B69977400778FB6 /* blocspot-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-07.png"; sourceTree = "<group>"; };
+		FA34E2E61B69977400778FB6 /* blocspot-07@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-07@2x.png"; sourceTree = "<group>"; };
+		FA34E2E71B69977400778FB6 /* blocspot-08.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-08.png"; sourceTree = "<group>"; };
+		FA34E2E81B69977400778FB6 /* blocspot-08@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-08@2x.png"; sourceTree = "<group>"; };
+		FA34E2E91B69977400778FB6 /* blocspot-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-09.png"; sourceTree = "<group>"; };
+		FA34E2EA1B69977400778FB6 /* blocspot-09@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blocspot-09@2x.png"; sourceTree = "<group>"; };
 		FA762E9B1B626C3D0035E1AF /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DataSource.h; path = BlocSpot/DataSource.h; sourceTree = "<group>"; };
 		FA762E9C1B626C3D0035E1AF /* DataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DataSource.m; path = BlocSpot/DataSource.m; sourceTree = "<group>"; };
 		FA762EA71B6271160035E1AF /* PlaceOfInterest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlaceOfInterest.h; path = BlocSpot/PlaceOfInterest.h; sourceTree = "<group>"; };
@@ -98,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				FA20F7991B5EFECB00E942F1 /* BlocSpot */,
+				FA34E2D81B69975900778FB6 /* Wireframes */,
 				FA20F7B61B5EFECB00E942F1 /* BlocSpotTests */,
 				FA20F7981B5EFECB00E942F1 /* Products */,
 				7628CE906175EF35BB51DA5D /* Pods */,
@@ -121,10 +158,10 @@
 				FA20F79F1B5EFECB00E942F1 /* AppDelegate.m */,
 				FA20F7A11B5EFECB00E942F1 /* MasterViewController.h */,
 				FA20F7A21B5EFECB00E942F1 /* MasterViewController.m */,
-				FA20F7A41B5EFECB00E942F1 /* DetailViewController.h */,
-				FA20F7A51B5EFECB00E942F1 /* DetailViewController.m */,
 				FA20F7ED1B5FDCAC00E942F1 /* MapViewController.h */,
 				FA20F7EE1B5FDCAC00E942F1 /* MapViewController.m */,
+				FA34E2CF1B680D5500778FB6 /* DetailViewController.h */,
+				FA34E2D01B680D5500778FB6 /* DetailViewController.m */,
 				FA20F7A71B5EFECB00E942F1 /* Main.storyboard */,
 				FA762EAA1B6277590035E1AF /* Model */,
 				FA20F79A1B5EFECB00E942F1 /* Supporting Files */,
@@ -158,6 +195,31 @@
 				FA20F7B81B5EFECB00E942F1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA34E2D81B69975900778FB6 /* Wireframes */ = {
+			isa = PBXGroup;
+			children = (
+				FA34E2D91B69977400778FB6 /* blocspot-01.png */,
+				FA34E2DA1B69977400778FB6 /* blocspot-01@2x.png */,
+				FA34E2DB1B69977400778FB6 /* blocspot-02.png */,
+				FA34E2DC1B69977400778FB6 /* blocspot-02@2x.png */,
+				FA34E2DD1B69977400778FB6 /* blocspot-03.png */,
+				FA34E2DE1B69977400778FB6 /* blocspot-03@2x.png */,
+				FA34E2DF1B69977400778FB6 /* blocspot-04.png */,
+				FA34E2E01B69977400778FB6 /* blocspot-04@2x.png */,
+				FA34E2E11B69977400778FB6 /* blocspot-05.png */,
+				FA34E2E21B69977400778FB6 /* blocspot-05@2x.png */,
+				FA34E2E31B69977400778FB6 /* blocspot-06.png */,
+				FA34E2E41B69977400778FB6 /* blocspot-06@2x.png */,
+				FA34E2E51B69977400778FB6 /* blocspot-07.png */,
+				FA34E2E61B69977400778FB6 /* blocspot-07@2x.png */,
+				FA34E2E71B69977400778FB6 /* blocspot-08.png */,
+				FA34E2E81B69977400778FB6 /* blocspot-08@2x.png */,
+				FA34E2E91B69977400778FB6 /* blocspot-09.png */,
+				FA34E2EA1B69977400778FB6 /* blocspot-09@2x.png */,
+			);
+			name = Wireframes;
 			sourceTree = "<group>";
 		};
 		FA762EAA1B6277590035E1AF /* Model */ = {
@@ -259,9 +321,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA34E2EF1B69977400778FB6 /* blocspot-03.png in Resources */,
+				FA34E2F81B69977400778FB6 /* blocspot-07@2x.png in Resources */,
+				FA34E2F11B69977400778FB6 /* blocspot-04.png in Resources */,
+				FA34E2F31B69977400778FB6 /* blocspot-05.png in Resources */,
 				FA20F7A91B5EFECB00E942F1 /* Main.storyboard in Resources */,
+				FA34E2F91B69977400778FB6 /* blocspot-08.png in Resources */,
+				FA34E2FC1B69977400778FB6 /* blocspot-09@2x.png in Resources */,
+				FA34E2FB1B69977400778FB6 /* blocspot-09.png in Resources */,
 				FA20F7AE1B5EFECB00E942F1 /* LaunchScreen.xib in Resources */,
+				FA34E2EB1B69977400778FB6 /* blocspot-01.png in Resources */,
+				FA34E2F41B69977400778FB6 /* blocspot-05@2x.png in Resources */,
+				FA34E2F21B69977400778FB6 /* blocspot-04@2x.png in Resources */,
+				FA34E2EE1B69977400778FB6 /* blocspot-02@2x.png in Resources */,
+				FA34E2F51B69977400778FB6 /* blocspot-06.png in Resources */,
 				FA20F7AB1B5EFECB00E942F1 /* Images.xcassets in Resources */,
+				FA34E2EC1B69977400778FB6 /* blocspot-01@2x.png in Resources */,
+				FA34E2F71B69977400778FB6 /* blocspot-07.png in Resources */,
+				FA34E2ED1B69977400778FB6 /* blocspot-02.png in Resources */,
+				FA34E2F61B69977400778FB6 /* blocspot-06@2x.png in Resources */,
+				FA34E2F01B69977400778FB6 /* blocspot-03@2x.png in Resources */,
+				FA34E2FA1B69977400778FB6 /* blocspot-08@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +398,7 @@
 				FA762E9D1B626C3D0035E1AF /* DataSource.m in Sources */,
 				FA20F7EF1B5FDCAC00E942F1 /* MapViewController.m in Sources */,
 				FA20F79D1B5EFECB00E942F1 /* main.m in Sources */,
-				FA20F7A61B5EFECB00E942F1 /* DetailViewController.m in Sources */,
+				FA34E2D11B680D5500778FB6 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

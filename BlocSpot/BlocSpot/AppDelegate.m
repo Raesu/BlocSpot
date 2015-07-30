@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "DetailViewController.h"
 @import GoogleMaps;
 
 @interface AppDelegate ()

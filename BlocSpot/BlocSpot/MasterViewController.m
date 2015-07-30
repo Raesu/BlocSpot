@@ -7,52 +7,67 @@
 //
 
 #import "MasterViewController.h"
+#import "DataSource.h"
+#import "PlaceOfInterest.h"
+#import "MapViewController.h"
 #import "DetailViewController.h"
 
 @interface MasterViewController ()
-
-@property NSMutableArray *objects;
-
+@property (nonatomic, strong) PlaceOfInterest *selectedPOI;
 @end
 
 @implementation MasterViewController
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    [[DataSource sharedInstance] addObserver:self forKeyPath:@"items" options:0 context:nil];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)dealloc {
+    [[DataSource sharedInstance] removeObserver:self forKeyPath:@"items"];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+    if (object == [DataSource sharedInstance] && [keyPath isEqualToString:@"items"]) {
+        [self.tableView reloadData];
+    }
+}
+
+- (NSArray *)items {
+    return [[DataSource sharedInstance] items];
 }
 
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
+    if ([segue.identifier isEqualToString:@"detailSegue"]) {
+        DetailViewController *detailVC = (DetailViewController *)[segue destinationViewController];
+        detailVC.placeOfInterest = self.selectedPOI;
+    }
 }
 
 #pragma mark - Table View
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    return [self items].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    PlaceOfInterest *poi = [[self items] objectAtIndex:indexPath.row];
+    cell.textLabel.text = poi.title;
+    cell.detailTextLabel.text = poi.snippet;
+    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    self.selectedPOI = [[self items] objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"detailSegue" sender:self];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

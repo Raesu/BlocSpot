@@ -2,16 +2,15 @@
 //  DetailViewController.h
 //  BlocSpot
 //
-//  Created by Ryan Summe on 7/21/15.
+//  Created by Ryan Summe on 7/28/15.
 //  Copyright (c) 2015 Ryan Summe. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
+#import "PlaceOfInterest.h"
 
 @interface DetailViewController : UIViewController
 
-@property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (nonatomic, strong) PlaceOfInterest *placeOfInterest;
 
 @end
-
