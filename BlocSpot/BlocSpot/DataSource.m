@@ -29,7 +29,8 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-
+        
+        // unable to do the below on async, google maps SDK: method calls need to be on UI thread
         NSString *fullPath = [self pathForFilename:NSStringFromSelector(@selector(items))];
         NSArray *storedItems = [NSKeyedUnarchiver unarchiveObjectWithFile:fullPath];
             if (storedItems.count > 0) {
@@ -65,10 +66,33 @@
     }
 }
 
+#pragma mark KVO Methods
+
 - (void)addPOI:(PlaceOfInterest *)POI {
     NSMutableArray *itemsWithKVO = [self mutableArrayValueForKey:@"items"];
     [itemsWithKVO addObject:POI];
     [self saveItems];
 }
+
+- (void)updatePOI:(PlaceOfInterest *)POI {
+    NSMutableArray *itemsWithKVO = [self mutableArrayValueForKey:@"items"];
+    
+    // bad way to do this (when items array gets very large). pass in index or id.
+    for (PlaceOfInterest *item in itemsWithKVO) {
+        if (item.position.latitude == POI.position.latitude &&
+            item.position.longitude == POI.position.longitude) {
+            [itemsWithKVO replaceObjectAtIndex:[itemsWithKVO indexOfObject:item] withObject:POI];
+            break;
+        }
+    }
+    [self saveItems];
+}
+
+- (void)deletePOI:(PlaceOfInterest *)POI {
+    NSMutableArray *itemsWithKVO = [self mutableArrayValueForKey:@"items"];
+    [itemsWithKVO removeObject:POI];
+    [self saveItems];
+}
+
 
 @end

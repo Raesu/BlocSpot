@@ -13,5 +13,10 @@
 
 @property (nonatomic, strong, readonly) NSArray *items;
 + (instancetype)sharedInstance;
+- (void)saveItems;
+
 - (void)addPOI:(PlaceOfInterest *)POI;
+- (void)updatePOI:(PlaceOfInterest *)POI;
+- (void)deletePOI:(PlaceOfInterest *)POI;
+
 @end

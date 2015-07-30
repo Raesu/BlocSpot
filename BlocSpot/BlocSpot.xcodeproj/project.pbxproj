@@ -156,10 +156,10 @@
 			children = (
 				FA20F79E1B5EFECB00E942F1 /* AppDelegate.h */,
 				FA20F79F1B5EFECB00E942F1 /* AppDelegate.m */,
-				FA20F7A11B5EFECB00E942F1 /* MasterViewController.h */,
-				FA20F7A21B5EFECB00E942F1 /* MasterViewController.m */,
 				FA20F7ED1B5FDCAC00E942F1 /* MapViewController.h */,
 				FA20F7EE1B5FDCAC00E942F1 /* MapViewController.m */,
+				FA20F7A11B5EFECB00E942F1 /* MasterViewController.h */,
+				FA20F7A21B5EFECB00E942F1 /* MasterViewController.m */,
 				FA34E2CF1B680D5500778FB6 /* DetailViewController.h */,
 				FA34E2D01B680D5500778FB6 /* DetailViewController.m */,
 				FA20F7A71B5EFECB00E942F1 /* Main.storyboard */,

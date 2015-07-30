@@ -138,6 +138,10 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CEN-UL-52N" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="64" width="320" height="151"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -154,15 +158,20 @@
                             <constraint firstItem="5nt-nh-dCW" firstAttribute="top" secondItem="vrw-vx-dre" secondAttribute="bottom" constant="8" id="Tmb-3N-P48"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PDa-ip-Xsi" secondAttribute="trailing" constant="-16" id="daM-0X-V8s"/>
                             <constraint firstItem="5nt-nh-dCW" firstAttribute="leading" secondItem="Fko-y2-eLS" secondAttribute="leadingMargin" constant="-16" id="ewE-oq-aw3"/>
+                            <constraint firstItem="JxS-xn-6ub" firstAttribute="top" secondItem="CEN-UL-52N" secondAttribute="bottom" constant="8" id="gop-rn-TrD"/>
                             <constraint firstItem="vrw-vx-dre" firstAttribute="leading" secondItem="Fko-y2-eLS" secondAttribute="leadingMargin" constant="-16" id="hy7-eU-uRv"/>
+                            <constraint firstItem="CEN-UL-52N" firstAttribute="top" secondItem="5p1-GZ-f2i" secondAttribute="bottom" id="jWu-rM-2mk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CEN-UL-52N" secondAttribute="trailing" constant="-16" id="jrP-kd-giZ"/>
                             <constraint firstItem="PDa-ip-Xsi" firstAttribute="top" secondItem="6ZU-5K-0z5" secondAttribute="bottom" constant="8" id="kUe-iH-XDF"/>
                             <constraint firstItem="36b-e0-nwH" firstAttribute="top" secondItem="JxS-xn-6ub" secondAttribute="bottom" constant="8" id="ngO-oT-n9y"/>
                             <constraint firstItem="PDa-ip-Xsi" firstAttribute="leading" secondItem="Fko-y2-eLS" secondAttribute="leadingMargin" constant="-16" id="sLd-bu-frL"/>
                             <constraint firstItem="8WC-WF-RAs" firstAttribute="top" secondItem="5nt-nh-dCW" secondAttribute="bottom" id="vc6-KE-LMe"/>
+                            <constraint firstItem="CEN-UL-52N" firstAttribute="leading" secondItem="Fko-y2-eLS" secondAttribute="leadingMargin" constant="-16" id="y6J-JM-cMa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QnI-sa-8ZL"/>
                     <connections>
+                        <outlet property="mapView" destination="CEN-UL-52N" id="Ouw-cx-XSI"/>
                         <outlet property="nameTextView" destination="36b-e0-nwH" id="RhW-Q7-yuU"/>
                         <outlet property="notesTextView" destination="5nt-nh-dCW" id="7WX-cL-KtU"/>
                         <outlet property="snippetTextView" destination="PDa-ip-Xsi" id="3Sw-hN-ZkP"/>

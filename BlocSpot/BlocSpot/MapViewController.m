@@ -16,7 +16,7 @@
     BOOL firstLocationUpdate;
     CLLocationManager *locationManager;
 }
-@property (nonatomic, strong) PlaceOfInterest *nextPOI;
+@property (nonatomic, strong) PlaceOfInterest *placeOfInterest;
 @end
 
 @implementation MapViewController
@@ -58,24 +58,27 @@
 
 - (void)mapView:(GMSMapView *)mapView didTapAtCoordinate:(CLLocationCoordinate2D)coordinate {
 
-    if (self.nextPOI) {
-        self.nextPOI.map = nil;
-        self.nextPOI = nil;
+    if (self.placeOfInterest) {
+        self.placeOfInterest.map = nil;
+        self.placeOfInterest = nil;
     }
     
     [mapView_ animateWithCameraUpdate:[GMSCameraUpdate setTarget:coordinate]];
     
-    self.nextPOI = [PlaceOfInterest new];
-    self.nextPOI.position = coordinate;
-    self.nextPOI.appearAnimation = kGMSMarkerAnimationPop;
-    self.nextPOI.title = @"New POI Added";
-    self.nextPOI.snippet = @"Add from detail on previous screen.";
-    self.nextPOI.map = mapView_;
-    mapView_.selectedMarker = self.nextPOI;
-    
-    [[DataSource sharedInstance] addPOI:self.nextPOI];
+    self.placeOfInterest = [PlaceOfInterest new];
+    self.placeOfInterest.position = coordinate;
+    self.placeOfInterest.appearAnimation = kGMSMarkerAnimationPop;
+    self.placeOfInterest.title = @"New POI";
+    self.placeOfInterest.snippet = @"Add to your collection?";
+    self.placeOfInterest.map = mapView_;
+    mapView_.selectedMarker = self.placeOfInterest;
 }
 
+- (void)addPOI {
+    [[DataSource sharedInstance] addPOI:self.placeOfInterest];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"POI added." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
 
 #pragma mark KVO Methods
 
