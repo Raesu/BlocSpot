@@ -11,12 +11,14 @@
 #import "PlaceOfInterest.h"
 @import GoogleMaps;
 
-@interface MapViewController () <GMSMapViewDelegate> {
+@interface MapViewController () <GMSMapViewDelegate, UISearchBarDelegate> {
     BOOL firstLocationUpdate;
     CLLocationManager *locationManager;
 }
 
-@property (strong, nonatomic) IBOutlet GMSMapView *mapView;
+
+@property (nonatomic, strong) UISearchBar *searchBar;
+@property (nonatomic, strong) IBOutlet GMSMapView *mapView;
 @property (nonatomic, strong) PlaceOfInterest *placeOfInterest;
 @property (nonatomic, strong) GMSPlacePicker *placePicker;
 
@@ -29,6 +31,8 @@
     
     locationManager = [CLLocationManager new];
     [locationManager requestWhenInUseAuthorization];
+    
+    [self.mapView bringSubviewToFront:self.searchBar];
     
     CLLocationCoordinate2D loc;
     if (self.currentPOI) {
@@ -54,6 +58,32 @@
 
 - (void)dealloc {
     [self.mapView removeObserver:self forKeyPath:@"myLocation" context:NULL];
+}
+
+#pragma mark SearchBar
+
+- (IBAction)searchButton:(id)sender {
+    
+    [self.navigationItem setHidesBackButton:YES];
+    CGFloat width = self.view.frame.size.width;
+    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(15, 0, width - 30, 44)];
+    [self.searchBar setShowsCancelButton:YES animated:YES];
+    
+    self.searchBar.delegate = self;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.searchBar];
+    [self.searchBar becomeFirstResponder];
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    
+    [self.navigationItem setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Search" style:UIBarButtonItemStylePlain target:self action:@selector(searchButton:)] animated:YES];
+    
+    [self.navigationItem setHidesBackButton:NO animated:YES];
+}
+
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    NSLog(@"text is changing");
 }
 
 #pragma mark GMSMapViewDelegate

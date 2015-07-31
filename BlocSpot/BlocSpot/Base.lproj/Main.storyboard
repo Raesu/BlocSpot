@@ -194,12 +194,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Zp8-aj-hdy"/>
+                    <navigationItem key="navigationItem" id="Zp8-aj-hdy">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="T7I-9X-Kxv">
+                            <connections>
+                                <action selector="searchButton:" destination="zuk-b4-x6i" id="1DZ-Mg-sPT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="cfm-T6-De1" id="1xk-mQ-aV9"/>
+                        <outlet property="mapView" destination="cfm-T6-De1" id="p9v-Ew-FUY"/>
+                        <outlet property="searchDisplayController" destination="Gb9-iP-kdY" id="yDD-Xx-6GF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7j-P7-3HU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Gb9-iP-kdY">
+                    <connections>
+                        <outlet property="delegate" destination="zuk-b4-x6i" id="nmU-3d-ujd"/>
+                        <outlet property="searchContentsController" destination="zuk-b4-x6i" id="ceu-I4-Aob"/>
+                        <outlet property="searchResultsDataSource" destination="zuk-b4-x6i" id="gfj-Hc-sbe"/>
+                        <outlet property="searchResultsDelegate" destination="zuk-b4-x6i" id="5CZ-w9-O2I"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="716" y="-562"/>
         </scene>
