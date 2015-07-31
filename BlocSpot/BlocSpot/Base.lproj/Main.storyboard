@@ -189,12 +189,15 @@
                         <viewControllerLayoutGuide type="top" id="27A-fq-fWV"/>
                         <viewControllerLayoutGuide type="bottom" id="GBp-d8-2pS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cfm-T6-De1">
+                    <view key="view" contentMode="scaleToFill" id="cfm-T6-De1" customClass="GMSMapView">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Zp8-aj-hdy"/>
+                    <connections>
+                        <outlet property="mapView" destination="cfm-T6-De1" id="1xk-mQ-aV9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q7j-P7-3HU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

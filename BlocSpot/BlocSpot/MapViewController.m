@@ -12,12 +12,14 @@
 @import GoogleMaps;
 
 @interface MapViewController () <GMSMapViewDelegate> {
-    GMSMapView *mapView_;
     BOOL firstLocationUpdate;
     CLLocationManager *locationManager;
 }
+
+@property (strong, nonatomic) IBOutlet GMSMapView *mapView;
 @property (nonatomic, strong) PlaceOfInterest *placeOfInterest;
 @property (nonatomic, strong) GMSPlacePicker *placePicker;
+
 @end
 
 @implementation MapViewController
@@ -36,23 +38,22 @@
     }
     
     GMSCameraPosition *camera = [GMSCameraPosition cameraWithTarget:loc zoom:12.5];
-    mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
+    [self.mapView setCamera:camera];
     
-    mapView_.settings.myLocationButton = YES;
-    mapView_.settings.tiltGestures = NO;
-    mapView_.settings.rotateGestures = NO;
-    mapView_.delegate = self;
-    self.view = mapView_;
+    self.mapView.settings.myLocationButton = YES;
+    self.mapView.settings.tiltGestures = NO;
+    self.mapView.settings.rotateGestures = NO;
+    self.mapView.delegate = self;
 
     dispatch_async(dispatch_get_main_queue(), ^{
-        mapView_.myLocationEnabled = YES;
+        self.mapView.myLocationEnabled = YES;
     });
     
-    [mapView_ addObserver:self forKeyPath:@"myLocation" options:NSKeyValueObservingOptionNew context:NULL];
+    [self.mapView addObserver:self forKeyPath:@"myLocation" options:NSKeyValueObservingOptionNew context:NULL];
 }
 
 - (void)dealloc {
-    [mapView_ removeObserver:self forKeyPath:@"myLocation" context:NULL];
+    [self.mapView removeObserver:self forKeyPath:@"myLocation" context:NULL];
 }
 
 #pragma mark GMSMapViewDelegate
@@ -78,8 +79,8 @@
         }
         if (place) {
             self.placeOfInterest = [[PlaceOfInterest alloc] initWithPlace:place];
-            [mapView_ animateWithCameraUpdate:[GMSCameraUpdate setTarget:coordinate]];
-            self.placeOfInterest.map = mapView_;
+            [self.mapView animateWithCameraUpdate:[GMSCameraUpdate setTarget:coordinate]];
+            self.placeOfInterest.map = mapView;
             [self addPOI];
         }
     }];
@@ -91,15 +92,18 @@
         self.placeOfInterest.map = nil;
         self.placeOfInterest = nil;
     } else {
-        [mapView_ animateWithCameraUpdate:[GMSCameraUpdate setTarget:coordinate]];
+        [mapView animateWithCameraUpdate:[GMSCameraUpdate setTarget:coordinate]];
     
-        self.placeOfInterest = [PlaceOfInterest new];
-        self.placeOfInterest.position = coordinate;
-        self.placeOfInterest.appearAnimation = kGMSMarkerAnimationPop;
-        self.placeOfInterest.title = @"New POI";
-        self.placeOfInterest.snippet = @"Add to your collection?";
-        self.placeOfInterest.map = mapView_;
-        mapView_.selectedMarker = self.placeOfInterest;
+        GMSGeocoder *geocoder = [GMSGeocoder geocoder];
+        [geocoder reverseGeocodeCoordinate:coordinate completionHandler:^(GMSReverseGeocodeResponse *response, NSError *error) {
+            self.placeOfInterest = [PlaceOfInterest new];
+            self.placeOfInterest.position = coordinate;
+            self.placeOfInterest.appearAnimation = kGMSMarkerAnimationPop;
+            self.placeOfInterest.title = [response firstResult].thoroughfare;
+            self.placeOfInterest.snippet = [response firstResult].locality;
+            self.placeOfInterest.map = mapView;
+            mapView.selectedMarker = self.placeOfInterest;
+        }];
     }
 }
 
