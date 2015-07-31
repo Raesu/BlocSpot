@@ -63,7 +63,7 @@
         self.placeOfInterest.map = nil;
     }
     
-    float buffer = 0.004;
+    float buffer = 0.003;
     CLLocationCoordinate2D northEast = CLLocationCoordinate2DMake(coordinate.latitude + buffer, coordinate.longitude + buffer);
     CLLocationCoordinate2D southWest = CLLocationCoordinate2DMake(coordinate.latitude - buffer, coordinate.longitude - buffer);
     
@@ -71,7 +71,6 @@
     GMSPlacePickerConfig *config = [[GMSPlacePickerConfig alloc] initWithViewport:viewPort];
     self.placePicker = [[GMSPlacePicker alloc] initWithConfig:config];
     
-    // what if the user doesn't choose a "place"?
     [self.placePicker pickPlaceWithCallback:^(GMSPlace *place, NSError *error) {
         if (error) {
             NSLog(@"Error picking place: %@", [error localizedDescription]);

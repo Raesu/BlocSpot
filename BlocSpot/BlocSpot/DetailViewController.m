@@ -12,11 +12,11 @@
 
 @interface DetailViewController ()
 
-@property (strong, nonatomic) IBOutlet UITextView *nameTextView;
-@property (strong, nonatomic) IBOutlet UITextView *snippetTextView;
-@property (strong, nonatomic) IBOutlet UITextView *notesTextView;
-@property (strong, nonatomic) IBOutlet GMSMapView *mapView;
-@property (assign, nonatomic) BOOL doNotSave;
+@property (nonatomic, strong) IBOutlet UITextView *nameTextView;
+@property (nonatomic, strong) IBOutlet UITextView *snippetTextView;
+@property (nonatomic, strong) IBOutlet UITextView *notesTextView;
+@property (nonatomic, strong) IBOutlet GMSMapView *mapView;
+@property (nonatomic, assign) BOOL doNotSave;
 
 @end
 
@@ -32,7 +32,7 @@
     UIBarButtonItem *deleteButton = [[UIBarButtonItem alloc] initWithTitle:@"Delete"
                                                                      style:UIBarButtonItemStylePlain
                                                                     target:self
-                                                                    action:@selector(deletePOI:)];
+                                                                    action:@selector(deletePOI)];
     [self.navigationItem setTitle:@"POI Detail"];
     [self.navigationItem setRightBarButtonItem:deleteButton];
     
@@ -58,7 +58,7 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
-- (void)deletePOI:(id)sender {
+- (void)deletePOI {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Confirm" message:@"Are you sure you want to delete this POI?" preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Yes" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
