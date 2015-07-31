@@ -7,7 +7,4 @@
    <FileRef
       location = "group:BlocSpot.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:default.gpx">
-   </FileRef>
 </Workspace>

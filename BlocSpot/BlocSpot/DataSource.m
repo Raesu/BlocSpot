@@ -27,9 +27,7 @@
 }
 
 - (instancetype)init {
-    self = [super init];
-    if (self) {
-        
+    if (self = [super init]) {
         // unable to do the below on async, google maps SDK: method calls need to be on UI thread
         NSString *fullPath = [self pathForFilename:NSStringFromSelector(@selector(items))];
         NSArray *storedItems = [NSKeyedUnarchiver unarchiveObjectWithFile:fullPath];
